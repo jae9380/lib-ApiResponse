@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.example'
-version = '0.0.6'
+version = '0.0.7'
 
 java {
     sourceCompatibility = '17'
@@ -17,18 +17,9 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.exeample'
             artifactId = 'Api-Response'
-            version = '0.0.6'
+            version = '0.0.7'
 
             from components.java
-
-            versionMapping {
-                usage('java-api') {
-                    fromResolutionOf('runtimeClassp ath')
-                }
-                usage('java-runtime') {
-                    fromResolutionResult()
-                }
-            }
         }
     }
 }
