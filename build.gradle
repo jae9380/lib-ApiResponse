@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.example'
-version = '0.0.5'
+version = '0.0.6'
 
 java {
     sourceCompatibility = '17'
@@ -17,7 +17,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.exeample'
             artifactId = 'Api-Response'
-            version = '0.0.5'
+            version = '0.0.6'
 
             from components.java
 
