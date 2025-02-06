@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.example'
-version = '0.0.3'
+version = '0.0.4'
 
 java {
     toolchain {
@@ -19,7 +19,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.exeample'
             artifactId = 'Api-Response'
-            version = '0.0.3'
+            version = '0.0.4'
 
             from components.java
 
