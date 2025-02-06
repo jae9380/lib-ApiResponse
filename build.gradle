@@ -6,12 +6,10 @@ plugins {
 }
 
 group = 'com.example'
-version = '0.0.4'
+version = '0.0.5'
 
 java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
-    }
+    sourceCompatibility = '17'
 }
 
 publishing {
@@ -19,7 +17,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.exeample'
             artifactId = 'Api-Response'
-            version = '0.0.4'
+            version = '0.0.5'
 
             from components.java
 
@@ -43,6 +41,7 @@ configurations {
 
 repositories {
     mavenCentral()
+    maven { url "https://jitpack.io"  }
 }
 
 dependencyManagement {
