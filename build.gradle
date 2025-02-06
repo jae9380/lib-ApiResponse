@@ -6,22 +6,10 @@ plugins {
 }
 
 group = 'com.example'
-version = '0.0.7'
+version = '0.0.8'
 
 java {
     sourceCompatibility = '17'
-}
-
-publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId = 'com.exeample'
-            artifactId = 'Api-Response'
-            version = '0.0.7'
-
-            from components.java
-        }
-    }
 }
 
 configurations {
@@ -32,7 +20,6 @@ configurations {
 
 repositories {
     mavenCentral()
-    maven { url "https://jitpack.io"  }
 }
 
 dependencyManagement {
@@ -51,6 +38,18 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.exeample.apiresponse'
+            artifactId = 'Api-Response'
+            version = '0.0.8'
+
+            from components.java
+        }
+    }
 }
 
 tasks.named('test') {
