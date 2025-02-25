@@ -1,5 +1,6 @@
 package com.example.apiresponse.exception;
 
+import lombok.Generated;
 import lombok.Getter;
 
 @Getter
@@ -9,5 +10,10 @@ public class GincException extends RuntimeException {
     public GincException(ErrorCode e) {
         super(e.getMessage());
         this.errorCode = e;
+    }
+
+    @Generated
+    public ErrorCode getErrorCode() {
+        return this.errorCode;
     }
 }
